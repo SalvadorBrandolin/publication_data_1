@@ -1,0 +1,9 @@
+ATOM      1  C2  ACEHA   1      -5.661  26.806  18.828  1.00  0.00      ACEH
+ATOM      2  C1  ACEHA   1      -6.486  25.555  18.901  1.00  0.00      ACEH
+ATOM      3  H21 ACEHA   1      -7.524  25.305  17.249  1.00  0.00      ACEH
+ATOM      4  H22 ACEHA   1      -6.146  27.517  18.192  1.00  0.00      ACEH
+ATOM      5  H23 ACEHA   1      -4.695  26.573  18.431  1.00  0.00      ACEH
+ATOM      6  O2  ACEHA   1      -6.168  24.576  19.559  1.00  0.00      ACEH
+ATOM      7  O1  ACEHA   1      -7.622  25.601  18.172  1.00  0.00      ACEH
+ATOM      8  HO1 ACEHA   1      -5.554  27.220  19.809  1.00  0.00      ACEH
+END

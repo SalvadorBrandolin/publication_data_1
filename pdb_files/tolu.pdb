@@ -1,0 +1,16 @@
+ATOM      1  CG  TOLU   1      -2.085   0.000  -0.001  1.00  0.00      TOLU C
+ATOM      2  HG  TOLU   1      -3.165   0.000   0.001  1.00  0.00      TOLU H
+ATOM      3  CD1 TOLU   1      -1.385   1.213  -0.001  1.00  0.00      TOLU C
+ATOM      4  HD1 TOLU   1      -1.925   2.149   0.001  1.00  0.00      TOLU H
+ATOM      5  CD2 TOLU   1      -1.385  -1.213  -0.001  1.00  0.00      TOLU C
+ATOM      6  HD2 TOLU   1      -1.925  -2.149   0.001  1.00  0.00      TOLU H
+ATOM      7  CE1 TOLU   1       0.017   1.214  -0.003  1.00  0.00      TOLU C
+ATOM      8  HE1 TOLU   1       0.553   2.151  -0.002  1.00  0.00      TOLU H
+ATOM      9  CE2 TOLU   1       0.017  -1.214  -0.003  1.00  0.00      TOLU C
+ATOM     10  HE2 TOLU   1       0.553  -2.151  -0.002  1.00  0.00      TOLU H
+ATOM     11  CZ  TOLU   1       0.724  -0.000  -0.008  1.00  0.00      TOLU C
+ATOM     12  CT  TOLU   1       2.225  -0.000   0.001  1.00  0.00      TOLU C
+ATOM     13  H11 TOLU   1       2.576   0.000   1.056  1.00  0.00      TOLU H
+ATOM     14  H12 TOLU   1       2.602   0.906  -0.520  1.00  0.00      TOLU H
+ATOM     15  H13 TOLU   1       2.602  -0.906  -0.520  1.00  0.00      TOLU H
+END

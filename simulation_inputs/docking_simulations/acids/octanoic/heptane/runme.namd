@@ -1,0 +1,101 @@
+# ----------input-----
+
+coordinates             solvate.pdb
+structure               solvate.psf
+parameters    		    par_all36_prot.prm
+parameters    		    par_all22_prot.prm
+parameters    		    par_all27_prot_lipid_na.inp
+parameters    		    par_all36_carb.prm
+parameters    		    par_all36_cgenff.prm
+parameters    		    par_all36_lipid.prm
+parameters    		    par_all36_na.prm
+parameters    		    toppar_all36_carb_glycopeptide.str
+parameters				toppar_all36_lipid_model.str
+parameters			    oca.prm
+parameters			    toppar_water_ions_namd.str
+parameters			    toppar_water_ions.str
+paratypecharmm          on
+#bincoordinates         minimized.restart.coor
+#binvelocities          minimized.restart.vel
+
+# ----------output------
+
+set output              output
+
+outputname              $output
+dcdfile                 ${output}.dcd
+xstFile                 ${output}.xst
+dcdfreq                 200
+xstFreq                 200
+binaryoutput            yes
+binaryrestart           yes
+outputEnergies          1000
+restartfreq             10000
+
+
+# ---------Basic dynamics-------
+exclude                 scaled1-4
+1-4scaling              1
+COMmotion               no
+dielectric              1.0
+
+# --------Simulation space partitioning----
+switching               on
+switchdist              9
+cutoff                  10
+pairlistdist            11
+
+# --------Multiple time stepping----
+firsttimestep           0
+timestep                2
+numsteps		        100
+
+
+# -------Temperature control----
+set temperature         303.15
+temperature             $temperature;  # initial temperature
+
+# -------Langevin Dynamics------
+langevin                on;            # do langevin dynamics
+langevinDamping         1;              # damping coefficient (gamma) of 1/ps
+langevinTemp            $temperature;   # bath temperature
+
+# ===============================================
+
+PME on
+PMEGridSizeX 66
+PMEGridSizeY 66
+PMEGridSizeZ 66
+
+# doesnt work with just pme
+
+useGroupPressure yes
+
+# with grouppressure, works better, holes still there
+
+LangevinPiston   	on
+LangevinPistonTarget 	1.02
+LangevinPistonPeriod 	150
+LangevinPistonDecay 	90
+LangevinPistonTemp  	$temperature
+
+# with langevin piston, works!!! But slower.
+
+# ===============================================
+
+# Periodic Boundary conditions
+cellBasisVector1 66.1 0 0
+cellBasisVector2 0 66.02000000000001 0
+cellBasisVector3 0 0 66.022
+cellOrigin -0.05000000000000071 0.004000000000001336 0.0
+
+wrapWater           on             ;# wrap water to central cell
+wrapAll             on              ;# wrap other molecules too
+wrapNearest         off
+
+# ---------Scripting
+minimize            20000         ;# lower potential energy for 1000 steps
+reinitvels          $temperature  ;# since minimization zeros velocities
+run 5000000;
+
+# END

@@ -1,0 +1,29 @@
+#Proteina disuelta medio de reaccion hexano
+
+tolerance 2.0
+
+filetype pdb
+
+output solvprotein.pdb
+
+structure hexa.pdb
+    number 1262
+    inside box -33. -33. -33. 33. 33. 33.
+end structure
+
+structure water.pdb
+	number 245
+	inside box -33. -33. -33. 33. 33. 33.
+end structure
+
+structure h2o2.pdb
+	number 43
+	outside sphere 0. 0. 0. 25.
+	inside sphere 0. 0. 0. 31.
+end structure
+
+structure acetic.pdb
+	number 33
+	outside sphere 0. 0. 0. 24.
+	inside sphere 0. 0. 0. 31.
+end structure
