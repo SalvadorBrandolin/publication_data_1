@@ -2,6 +2,9 @@
 
 ## links of interest
 
+MD simulations  
+https://youtu.be/VdfeUSB3VZA
+
 NADM and VMD  
 https://www.youtube.com/watch?v=IArpsQsZ95U&ab_channel=Narogen
 
